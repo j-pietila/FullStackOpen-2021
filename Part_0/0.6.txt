@@ -1,0 +1,21 @@
+title 0.6: Uusi muistiinpano
+
+client->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over client:
+Client runs code from previously loaded spa.js
+end note
+
+note over client:
+Client creates a new note in JSON format with inputted form text and generated timestamp
+end note
+
+note over client:
+Client adds the new note to the list containing notes and redraws the notes in browser window
+end note
+
+note over client:
+Client sends the new note to server in JSON format
+end note
+
+server-->client: HTTP status code 201 "Created"

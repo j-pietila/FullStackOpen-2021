@@ -1,0 +1,19 @@
+title 0.5: Single Page App
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->client: HTML-code
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->client: main.css
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->client: spa.js
+
+note over client:
+Client runs code from spa.js which makes a request for JSON-data on the server
+end note
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->client: list containing the notes data in JSON format
+
+note over client:
+Client runs code from spa.js that renders the content part of notes from the received JSON data to browser window
+end note

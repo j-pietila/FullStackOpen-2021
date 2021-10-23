@@ -1,0 +1,30 @@
+title 0.4: Uusi muistiinpano
+
+client->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over client:
+Client sends the new note as text data to server
+end note
+
+note over server:
+Server creates a new note with received text content, generates a timestamp for it and pushes the note on a table containing notes
+end note
+
+server-->client: HTTP 302 URL redirection to /exampleapp/notes
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->client: HTML-code
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->client: main.css
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->client: main.js
+
+note over client:
+Client runs code from main.js which makes a request for JSON-data on the server
+end note
+
+client->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->client: list containing the notes data in JSON format
+
+note over client:
+Client runs an event handler from main.js that renders the content part of notes from the received JSON data to browser window
+end note
