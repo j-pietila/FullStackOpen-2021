@@ -1,1 +1,5 @@
-To get the sequence diagrams paste the answer texts to https://www.websequencediagrams.com/
+# Osa 0
+
+Osan 0 tehtävien palautukset
+
+Sekvenssikaaviot saa näkyviin kopioimalla vastausten tekstit [websequencediagrams](https://www.websequencediagrams.com/) palveluun.
