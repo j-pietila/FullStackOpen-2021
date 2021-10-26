@@ -8,4 +8,5 @@ Part_0
   * Tehtävät 0.4 - 0.6
 
 Part_1  
-  * Tehtävät 1.1 - 1.5
+  * Tehtävät 1.1 - 1.5 (kurssitiedot)
+  * Tehtävät 1.6 - 1.11 (unicafe)
