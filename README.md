@@ -14,3 +14,4 @@ Part_1
 
 Part_2  
   * Tehtävät 2.1 - 2.5 (kurssitiedot)
+  * Tehtävät 2.6 - 2.10 (puhelinluettelo)
