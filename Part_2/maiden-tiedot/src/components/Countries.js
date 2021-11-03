@@ -26,8 +26,7 @@ const Countries = ({ countries, country, singleCountrySelect }) => {
   }
   else if (countries.length > 1) {
     if (Object.keys(country).length === 0) { // No button selected single country
-      return renderCountryList(countries, singleCountrySelect
-      )
+      return renderCountryList(countries, singleCountrySelect)
     }
     else {
       return renderSingleCountry(country) // Button selected single country
@@ -37,7 +36,7 @@ const Countries = ({ countries, country, singleCountrySelect }) => {
     return renderSingleCountry(countries[0]) 
   }
   else {
-    return null
+    return null // Cover first time component render when the useEffect hook in App is not yet fired
   }
 }
   
@@ -55,21 +54,7 @@ const CountryListLine = ({ country, singleCountrySelect }) => {
 }
 
 const CountryDetailedView = ({ country }) => {
-  const firstRenderMockData = {
-    "location": {
-      "name": "Mock City"
-    },
-    "current": {
-      "temperature": 22,
-      "weather_icons": [
-        "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png"
-      ],
-      "wind_speed": 0,
-      "wind_dir": "N"
-    }
-  }
-
-  const [weather, setWeather] = useState(firstRenderMockData) // UseEffect hook is not fired at first Weather component rendering, which needs mock data
+  const [weather, setWeather] = useState({})
 
   useEffect(() => {
     axios
@@ -84,30 +69,35 @@ const CountryDetailedView = ({ country }) => {
       })
   }, [country])
 
-  return (
-    <div>
-      <h1>{country.name.common}</h1>
-      <p>
-        Capital: {country.capital}
-        <br></br>
-        Population: {country.population}
-      </p>
-      <h3>Spoken languages</h3>
-      <ul>
-        {Object.keys(country.languages).map(key =>
-          <li key={key}>
-            {country.languages[key]}
-          </li>
-        )}
-      </ul>
-      <img
-        id={country.name.common}
-        src={country.flags.png}
-        alt="country flag"
-      />
-      <Weather weather={weather} />
-    </div>
-  )
+  if (Object.keys(weather).length !== 0) {
+    return (
+      <div>
+        <h1>{country.name.common}</h1>
+        <p>
+          Capital: {country.capital}
+          <br></br>
+          Population: {country.population}
+        </p>
+        <h3>Spoken languages</h3>
+        <ul>
+          {Object.keys(country.languages).map(key =>
+            <li key={key}>
+              {country.languages[key]}
+            </li>
+          )}
+        </ul>
+        <img
+          id={country.name.common}
+          src={country.flags.png}
+          alt="country flag"
+        />
+        <Weather weather={weather} />
+      </div>
+    )
+    }
+  else {
+    return null // Cover first time component render when the useEffect hook is not yet fired
+  }
 }
 
 const Weather = ({ weather }) => {
