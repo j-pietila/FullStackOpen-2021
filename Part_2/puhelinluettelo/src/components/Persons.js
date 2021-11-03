@@ -12,19 +12,26 @@ const PersonForm = (props) => {
   )
 }
   
-const Persons = ({ persons }) => {
+const Persons = ({ persons, removePerson }) => {
   return (
     <ul>
       {persons.map(person =>
-        <Person key={person.name} person={person} />
+        <Person
+          key={person.id}
+          person={person} 
+          removePerson={() => removePerson(person.id)} />
       )}
     </ul>
   )
 }
   
-const Person = ({ person }) => {
+const Person = ({ person, removePerson }) => {
   return (
-    <li>{person.name} {person.number}</li>
+    <li>
+      {person.name}{" "}
+      {person.number}{" "}
+      <button onClick={removePerson}>Remove</button>
+    </li>
   )
 }
 
