@@ -1,5 +1,6 @@
 import React from "react"
 
+
 const PersonForm = (props) => {
   const { submitHandler, name, nameChange, number, numberChange} = props
   
@@ -14,7 +15,7 @@ const PersonForm = (props) => {
   
 const Persons = ({ persons, removePerson }) => {
   return (
-    <ul>
+    <ul className="persons">
       {persons.map(person =>
         <Person
           key={person.id}
