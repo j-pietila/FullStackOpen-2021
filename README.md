@@ -1,19 +1,21 @@
 # Full Stack Open 2021 - Palautusrepositorio tehtäville
 
-Vastaukset kurssin tehtäviin osioittain jaoteltuna.
+Tehtävien palautukset sisältävät kaikki tiedostot lukuunottamatta riippuvuuksia sisältävää hakemistoa node_modules.
 
-Tehtävien React-projektit sisältävät kaikki tiedostot lukuunottamatta riippuvuuksia sisältävää hakemistoa node_modules.
+## Osa 0 - Web-sovellusten toiminnan perusteet
+Tarkastellaan web-sovellusten kehityshistoriaa ja toimintaperiaatteita.  
+[Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_0)
 
-Part_0  
-  * Tehtävät 0.4 - 0.6
+## Osa 1 - Reactin perusteet
+Tutustutaan Reactin ja JavaScriptin perusteisiin. Rakennetaan muutama front-end sovellus näiden avulla.  
+[Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_1)
 
-Part_1  
-  * Tehtävät 1.1 - 1.5 (kurssitiedot)
-  * Tehtävät 1.6 - 1.11 (unicafe)
-  * Tehtävät 1.12 - 1.14 (anekdootit)
+## Osa 2 - Palvelimen kanssa tapahtuva kommunikointi
+Kehitetään front-end sovelluksia edelleen. Aiheina datakokoelmien renderöinti, HTML-lomakkeiden käyttö käyttäjäsyötteinä, datan hakeminen palvelimelta ja CSS-tyylien lisääminen.  
+[Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_2) 
 
-Part_2  
-  * Tehtävät 2.1 - 2.5 (kurssitiedot)
-  * Tehtävät 2.6 - 2.11 (puhelinluettelo)
-  * Tehtävät 2.12 - 2.14 (maiden-tiedot)
-  * Tehtävät 2.15 - 2.20 (puhelinluettelo)
+## Osa 3 - Palvelimen ohjelmointi NodeJS:n Express-kirjastolla
+ Kehitetään osan 2 [puhelinluettelon](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_2/puhelinluettelo) front-endille Node.js/Express/MongoDB back-end toteutus REST-periaatteita noudattaen. Rakennetaan front-endistä production build ja konfiguroidaan puhelinluettelon full-stack toteutus Herokussa toimivaksi.  
+ 
+ Tehtävien palautukset ovat tällä kertaa eri repositoriossa, koska Heroku vaatii oman repositorion back-endille.  
+ [Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021-Part3)
