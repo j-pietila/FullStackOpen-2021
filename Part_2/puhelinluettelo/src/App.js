@@ -58,12 +58,18 @@ const App = () => {
           }, 3000)
           resetPersonInputs()
         })
+        .catch(error => {
+          setErrorMessage(`${error.response.data.error}`)
+          setTimeout(() => {
+            setErrorMessage(null)
+          }, 8000)
+        })
     }
   }
 
   const updateNumber = (personObject) => {
     const updatePerson = persons.find(person => person.name === newName)
-        
+
     personService
       .update(updatePerson.id, personObject)
       .then(returnedPerson => {
