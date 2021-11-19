@@ -1,0 +1,8 @@
+# Dependencies
+node_modules
+
+# VSCode test requests
+requests
+
+# Environment variables
+.env
