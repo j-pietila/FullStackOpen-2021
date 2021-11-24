@@ -83,6 +83,54 @@ test("new blogs without title and url get rejected as bad requests", async () =>
   expect(blogsAfter).toHaveLength(helper.initialBlogs.length)
 })
 
+test("single blog can be deleted with delete /api/blogs/id", async () => {
+  const blogsBefore = await helper.blogsInDB()
+  const blogToDelete = blogsBefore[0]
+
+  await api
+    .delete(`/api/blogs/${blogToDelete.id}`)
+    .expect(204)
+
+  const blogsAfter = await helper.blogsInDB()
+
+  expect(blogsAfter).toHaveLength(blogsBefore.length - 1)
+
+  const urls = blogsAfter.map(blog => blog.url)
+
+  expect(urls).not.toContain(blogToDelete.url)
+})
+
+test("existing blogs fields can be updated with put /api/blogs/id", async () => {
+  const blogsBefore = await helper.blogsInDB()
+  const blogToUpdate = blogsBefore[0]
+
+  const updatedBlogData = {
+    title: "Tim Ferriss Interviews Arnold Schwarzenegger on Psychological Warfare",
+    author: "Tim Ferriss",
+    url: "https://tim.blog/2015/02/02/arnold-schwarzenegger/",
+    likes: 16
+  }
+
+  await api
+    .put(`/api/blogs/${blogToUpdate.id}`)
+    .send(updatedBlogData)
+    .expect(200)
+
+  const blogsAfter = await helper.blogsInDB()
+
+  const updatedFields = Object.keys(updatedBlogData)
+  const updatedFieldsInDB = {}
+
+  for (const key in blogsAfter[0]) {
+    if (updatedFields.includes(key)) {
+      updatedFieldsInDB[key] = blogsAfter[0][key]
+    }
+  }
+
+  expect(Object.entries(updatedFieldsInDB))
+    .toEqual(Object.entries(updatedBlogData))
+})
+
 afterAll(() => {
   mongoose.connection.close()
 })
