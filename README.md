@@ -19,3 +19,7 @@ Kehitetään front-end sovelluksia edelleen. Aiheina datakokoelmien renderöinti
  
  Tehtävien palautukset ovat tällä kertaa eri repositoriossa, koska Heroku vaatii oman repositorion back-endille.  
  [Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021-Part3)
+
+## Osa 4 - Express-sovellusten testaaminen, käyttäjänhallinta
+Kehitetään REST-konventioiden mukainen back-end, jonka avulla voidaan lisätä, muokata ja poistaa blogeja bookmark-tyyppisenä listauksena. Aiheina Node-sovellusten rakenteiden hyvät konventiot, automatisoitu yksikkö- ja integraatiotestaus, käyttäjänhallinta ja token-perustainen kirjautuminen.  
+[Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_4)
