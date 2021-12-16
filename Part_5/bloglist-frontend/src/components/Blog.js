@@ -1,10 +1,11 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 
 const Blog = ({ blog, loggedUser, like, remove }) => {
   const [detailedView, setdetailedView] = useState(false)
 
   const addLike = (blogToUpdate) => {
-    like({ 
+    like({
       id: blogToUpdate.id,
       user: blogToUpdate.user,
       likes: blogToUpdate.likes + 1,
@@ -42,8 +43,15 @@ const Blog = ({ blog, loggedUser, like, remove }) => {
     <div>
       {blog.title} - {blog.author}
       <button onClick={() => setdetailedView(!detailedView)}>View details</button>
-    </div>  
+    </div>
   )
+}
+
+Blog.propTypes = {
+  blog: PropTypes.object.isRequired,
+  loggedUser: PropTypes.object.isRequired,
+  like: PropTypes.func.isRequired,
+  remove: PropTypes.func.isRequired
 }
 
 export default Blog

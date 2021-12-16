@@ -9,7 +9,7 @@ const App = () => {
   const [blogs, setBlogs] = useState([])
   const [errorMessage, setErrorMessage] = useState(null)
   const [notification, setNotification] = useState(null)
-  const [username, setUsername] = useState("") 
+  const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [user, setUser] = useState(null)
 
@@ -103,7 +103,7 @@ const App = () => {
 
   const loginHandler = async (event) => {
     event.preventDefault()
-    
+
     try {
       const user = await loginService.login({
         username, password,
@@ -130,7 +130,7 @@ const App = () => {
     <form onSubmit={loginHandler}>
       <div>
         username
-          <input
+        <input
           type="text"
           value={username}
           name="Username"
@@ -139,7 +139,7 @@ const App = () => {
       </div>
       <div>
         password
-          <input
+        <input
           type="password"
           value={password}
           name="Password"
@@ -147,7 +147,7 @@ const App = () => {
         />
       </div>
       <button type="submit">login</button>
-    </form>      
+    </form>
   )
 
   const Notification = ({ notification, errorMessage }) => {
@@ -188,8 +188,8 @@ const App = () => {
       <div>
         <h2>Log in to application</h2>
         <Notification
-        notification={notification}
-        errorMessage={errorMessage}
+          notification={notification}
+          errorMessage={errorMessage}
         />
         {loginForm()}
       </div>
@@ -216,7 +216,7 @@ const App = () => {
         <p></p>
         {sortBlogsByLikes()}
         {blogs.map(blog =>
-          <Blog 
+          <Blog
             key={blog.id}
             blog={blog}
             loggedUser={user}
