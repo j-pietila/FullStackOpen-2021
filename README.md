@@ -15,7 +15,7 @@ Kehitetään front-end sovelluksia edelleen. Aiheina datakokoelmien renderöinti
 [Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_2) 
 
 ## Osa 3 - Palvelimen ohjelmointi NodeJS:n Express-kirjastolla
- Kehitetään osan 2 [puhelinluettelon](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_2/puhelinluettelo) front-endille Node.js/Express/MongoDB back-end toteutus REST-periaatteita noudattaen. Rakennetaan front-endistä production build ja konfiguroidaan puhelinluettelon full-stack toteutus Herokussa toimivaksi.  
+ Kehitetään osan kaksi [puhelinluettelon](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_2/puhelinluettelo) front-endille Node.js/Express/MongoDB back-end toteutus REST-periaatteita noudattaen. Rakennetaan front-endistä production build ja konfiguroidaan puhelinluettelon full-stack toteutus Herokussa toimivaksi.  
  
  Tehtävien palautukset ovat tällä kertaa eri repositoriossa, koska Heroku vaatii oman repositorion back-endille.  
  [Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021-Part3)
@@ -23,3 +23,7 @@ Kehitetään front-end sovelluksia edelleen. Aiheina datakokoelmien renderöinti
 ## Osa 4 - Express-sovellusten testaaminen, käyttäjänhallinta
 Kehitetään REST-konventioiden mukainen back-end, jonka avulla voidaan lisätä, muokata ja poistaa blogeja bookmark-tyyppisenä listauksena. Aiheina Node-sovellusten rakenteiden hyvät konventiot, automatisoitu yksikkö- ja integraatiotestaus, käyttäjänhallinta ja token-perustainen kirjautuminen.  
 [Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_4)
+
+## Osa 5 - React-sovelluksen testaaminen
+Rakennetaan front-end osan neljä [blogilistan](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_4/blogilista-backend) back-endille. Aiheina sisäänkirjautumisen ja käyttäjänhallinnan toteutus, vaihtoehtoiset sivunäkymän renderöinnit, komponenttien propsien tarkempi määrittely sekä front-endin automaattinen yksikkö- ja end to end -testaus.  
+[Tehtävien palautukset](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_5)

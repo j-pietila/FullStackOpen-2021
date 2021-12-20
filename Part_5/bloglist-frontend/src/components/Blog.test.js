@@ -41,7 +41,7 @@ describe("<Blog >", () => {
     expect(component.container).not.toHaveTextContent("www.test.com")
   })
 
-  test("renders also blog likes and url after view details button pressed", async () => {
+  test("renders also blog likes and url after view details button pressed", () => {
     const button = component.getByText("View details")
     fireEvent.click(button)
 
