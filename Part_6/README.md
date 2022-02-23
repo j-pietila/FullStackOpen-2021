@@ -6,3 +6,7 @@
 
 ### Monta reduseria
   * [Tehtävät 6.9 - 6.12](https://fullstackopen.com/osa6/monta_reduseria#tehtavat-6-9-6-12) - ([redux-anecdotes](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_6/redux-anecdotes))
+
+### Redux-sovelluksen kommunikointi palvelimen kanssa
+
+  * [Tehtävät 6.13 - 6.14](https://fullstackopen.com/osa6/redux_sovelluksen_kommunikointi_palvelimen_kanssa#tehtavat-6-13-6-14) - ([redux-anecdotes](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_6/redux-anecdotes))
