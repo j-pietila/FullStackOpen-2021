@@ -10,3 +10,4 @@
 ### Redux-sovelluksen kommunikointi palvelimen kanssa
 
   * [Tehtävät 6.13 - 6.14](https://fullstackopen.com/osa6/redux_sovelluksen_kommunikointi_palvelimen_kanssa#tehtavat-6-13-6-14) - ([redux-anecdotes](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_6/redux-anecdotes))
+  * [Tehtävät 6.15 - 6.18](https://fullstackopen.com/osa6/redux_sovelluksen_kommunikointi_palvelimen_kanssa#tehtavat-6-15-6-18) - ([redux-anecdotes](https://github.com/j-pietila/FullStackOpen-2021/tree/main/Part_6/redux-anecdotes))
